@@ -10,11 +10,6 @@ class MyApp extends StatelessWidget {
     return Response(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          textTheme: TextTheme(
-            body1: TextStyle(),
-          ),
-        ),
         home: LockScreen(),
       ),
     );

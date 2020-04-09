@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:response/Response.dart';
 import 'package:tesla_smart_app/screens/car_status.dart';
@@ -6,7 +7,18 @@ import 'package:tesla_smart_app/widgets/button.dart';
 
 var response = ResponseUI();
 
-class LockScreen extends StatelessWidget {
+class LockScreen extends StatefulWidget {
+  @override
+  _LockScreenState createState() => _LockScreenState();
+}
+
+class _LockScreenState extends State<LockScreen> {
+  @override
+  void setState(fn) {
+    super.setState(fn);
+    SystemChrome.setEnabledSystemUIOverlays([]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

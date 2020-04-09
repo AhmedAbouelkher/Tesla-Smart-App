@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:response/Response.dart';
 import 'package:tesla_smart_app/widgets/button.dart';
@@ -10,7 +11,18 @@ import 'package:tesla_smart_app/widgets/navigation_map.dart';
 
 var response = ResponseUI();
 
-class CarStatusDetails extends StatelessWidget {
+class CarStatusDetails extends StatefulWidget {
+  @override
+  _CarStatusDetailsState createState() => _CarStatusDetailsState();
+}
+
+class _CarStatusDetailsState extends State<CarStatusDetails> {
+  @override
+  void setState(fn) {
+    super.setState(fn);
+    SystemChrome.setEnabledSystemUIOverlays([]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
