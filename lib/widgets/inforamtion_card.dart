@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'bottom_sheet.dart';
+import 'package:tesla_smart_app/screens/bottom_sheet.dart';
 
 class InformationCard extends StatefulWidget {
   InformationCard({this.cardStatus, this.cardTitle});

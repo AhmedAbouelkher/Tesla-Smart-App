@@ -115,11 +115,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: response.setWidth(70)),
-                  child: TempratureSlider(),
-                ),
+                TempratureSlider(),
                 SizedBox(height: response.setHeight(30)),
                 Text(
                   'Fan speed\n',

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'bottom_sheet.dart';
 import 'package:tesla_smart_app/widgets/custom_slider_thumb.dart';
 import 'package:tesla_smart_app/widgets/custom_slider_track.dart';
+import 'package:tesla_smart_app/screens/bottom_sheet.dart';
 
 class FanSpeedSlider extends StatefulWidget {
   @override

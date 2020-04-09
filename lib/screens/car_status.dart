@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:response/Response.dart';
 import 'package:tesla_smart_app/widgets/button.dart';
-import 'package:tesla_smart_app/widgets/bottom_sheet.dart';
+import 'package:tesla_smart_app/screens/bottom_sheet.dart';
 import 'package:tesla_smart_app/widgets/inforamtion_card.dart';
 import 'package:tesla_smart_app/widgets/status_chip.dart';
 import 'package:tesla_smart_app/widgets/navigation_map.dart';

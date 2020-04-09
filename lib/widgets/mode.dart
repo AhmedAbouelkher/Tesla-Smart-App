@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tesla_smart_app/widgets/button.dart';
 
-import 'bottom_sheet.dart';
+import 'package:tesla_smart_app/screens/bottom_sheet.dart';
 
 class Mode extends StatelessWidget {
   const Mode({

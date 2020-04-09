@@ -16,26 +16,26 @@ class TempratureSlider extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Color(0xff5f6569).withOpacity(0.8),
-        //     blurRadius: buttonRadius / 3.5, //buttonRadius / 2.5
-        //     spreadRadius: -buttonRadius / 6.6, //buttonRadius / 5.6
-        //     offset: Offset(
-        //       -buttonRadius / 6.5,
-        //       -buttonRadius / 6.5,
-        //     ), //buttonRadius / 5, buttonRadius / 5
-        //   ),
-        //   BoxShadow(
-        //     color: Colors.black,
-        //     blurRadius: buttonRadius / 4.5, //buttonRadius / 2.5
-        //     spreadRadius: -buttonRadius / 4.6, //buttonRadius / 5.6
-        //     offset: Offset(
-        //       buttonRadius / 6.5,
-        //       buttonRadius / 6.5,
-        //     ), //buttonRadius / 5, buttonRadius / 5
-        //   ),
-        // ],
+        boxShadow: [
+          // BoxShadow(
+          //   color: Color(0xff5f6569).withOpacity(0.6),
+          //   blurRadius: buttonRadius / 4.5, //buttonRadius / 2.5
+          //   spreadRadius: -buttonRadius / 6.6, //buttonRadius / 5.6
+          //   offset: Offset(
+          //     -buttonRadius / 7.5,
+          //     -buttonRadius / 7.5,
+          //   ), //buttonRadius / 5, buttonRadius / 5
+          // ),
+          BoxShadow(
+            color: Colors.black87,
+            blurRadius: buttonRadius / 4.5, //buttonRadius / 2.5
+            spreadRadius: -buttonRadius / 4.6, //buttonRadius / 5.6
+            offset: Offset(
+              buttonRadius / 7.5,
+              buttonRadius / 7.5,
+            ), //buttonRadius / 5, buttonRadius / 5
+          ),
+        ],
       ),
       child: Center(
         child: Container(
