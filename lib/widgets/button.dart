@@ -15,6 +15,7 @@ class RoundedButton extends StatelessWidget {
     this.activeColors = primaryColor,
     this.isMain = false,
     this.blackOpacity = 1,
+    this.child,
   });
   final double buttonRadius;
   final double iconSize;
@@ -24,6 +25,7 @@ class RoundedButton extends StatelessWidget {
   final VoidCallback onTap;
   final bool isMain;
   final double blackOpacity;
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -76,13 +78,14 @@ class RoundedButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(buttonRadius), //buttonRadius
             ),
             child: Container(
-              child: Center(
-                child: Icon(
-                  icon,
-                  size: iconSize ?? buttonRadius,
-                  color: iconColor ?? Colors.white70,
-                ),
-              ),
+              child: child ??
+                  Center(
+                    child: Icon(
+                      icon,
+                      size: iconSize ?? buttonRadius,
+                      color: iconColor ?? Colors.white70,
+                    ),
+                  ),
             ),
           ),
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tesla_smart_app/Response.dart';
+import 'package:response/Response.dart';
 import 'package:tesla_smart_app/screens/car_status.dart';
 import 'package:tesla_smart_app/widgets/button.dart';
 
@@ -9,7 +9,6 @@ var response = ResponseUI();
 class LockScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screenHieght = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Color(0xff353A40),
       body: SafeArea(
@@ -20,7 +19,7 @@ class LockScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.all(20),
+                    margin: EdgeInsets.all(response.setHeight(20)),
                     child: RoundedButton(
                       buttonRadius: response.setHeight(21),
                       icon: FontAwesomeIcons.cog,
@@ -56,6 +55,7 @@ class LockScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: response.setFontSize(150),
                           color: Colors.white,
+                          fontWeight: FontWeight.w200,
                         ),
                       ),
                       Text(
@@ -68,19 +68,17 @@ class LockScreen extends StatelessWidget {
                     ],
                   ),
                   Positioned(
-                    right: response.setWidth(-250),
-                    top: response.setHeight(50),
+                    right: response.setWidth(-240),
+                    top: response.setHeight(40),
                     child: Image.asset(
                       'assets/images/home_page.png',
                       fit: BoxFit.cover,
-                      scale: 1.1,
+                      scale: response.screenHeight / 680,
                     ),
                   ),
                 ],
               ),
-              SizedBox(
-                height: screenHieght * 0.29,
-              ),
+              SizedBox(height: response.setHeight(200)),
               Text(
                 'A/C is turned on',
                 style: TextStyle(
@@ -88,7 +86,7 @@ class LockScreen extends StatelessWidget {
                   fontSize: response.setFontSize(17),
                 ),
               ),
-              SizedBox(height: response.setHeight(20)),
+              SizedBox(height: response.setHeight(25)),
               RoundedButton(
                 buttonRadius: response.setHeight(45),
                 icon: Icons.lock_open,
@@ -111,6 +109,7 @@ class LockScreen extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
+                  fontSize: response.setFontSize(14),
                 ),
               ),
             ],

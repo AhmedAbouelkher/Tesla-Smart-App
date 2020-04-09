@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
+import 'package:tesla_smart_app/screens/car_status.dart';
 
 class TempratureSlider extends StatelessWidget {
   final double buttonRadius = 135;
@@ -15,26 +16,26 @@ class TempratureSlider extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0xff5f6569).withOpacity(0.8),
-            blurRadius: buttonRadius / 3.5, //buttonRadius / 2.5
-            spreadRadius: -buttonRadius / 6.6, //buttonRadius / 5.6
-            offset: Offset(
-              -buttonRadius / 6.5,
-              -buttonRadius / 6.5,
-            ), //buttonRadius / 5, buttonRadius / 5
-          ),
-          BoxShadow(
-            color: Colors.black,
-            blurRadius: buttonRadius / 4.5, //buttonRadius / 2.5
-            spreadRadius: -buttonRadius / 4.6, //buttonRadius / 5.6
-            offset: Offset(
-              buttonRadius / 6.5,
-              buttonRadius / 6.5,
-            ), //buttonRadius / 5, buttonRadius / 5
-          ),
-        ],
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Color(0xff5f6569).withOpacity(0.8),
+        //     blurRadius: buttonRadius / 3.5, //buttonRadius / 2.5
+        //     spreadRadius: -buttonRadius / 6.6, //buttonRadius / 5.6
+        //     offset: Offset(
+        //       -buttonRadius / 6.5,
+        //       -buttonRadius / 6.5,
+        //     ), //buttonRadius / 5, buttonRadius / 5
+        //   ),
+        //   BoxShadow(
+        //     color: Colors.black,
+        //     blurRadius: buttonRadius / 4.5, //buttonRadius / 2.5
+        //     spreadRadius: -buttonRadius / 4.6, //buttonRadius / 5.6
+        //     offset: Offset(
+        //       buttonRadius / 6.5,
+        //       buttonRadius / 6.5,
+        //     ), //buttonRadius / 5, buttonRadius / 5
+        //   ),
+        // ],
       ),
       child: Center(
         child: Container(
@@ -64,26 +65,26 @@ class TempratureSlider extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w900,
-                        fontSize: 40),
+                        fontSize: response.setFontSize(40)),
                   ),
                   Text(
                     "Cooling...",
                     style: TextStyle(
                         color: Colors.white70,
                         fontWeight: FontWeight.w500,
-                        fontSize: 17),
+                        fontSize: response.setFontSize(17)),
                   ),
                 ],
               );
             },
             appearance: CircularSliderAppearance(
-              size: 250,
+              size: response.setHeight(250),
               startAngle: 90,
               angleRange: 360,
               customWidths: CustomSliderWidths(
-                trackWidth: 40,
-                progressBarWidth: 40,
-                handlerSize: 18,
+                trackWidth: response.setHeight(40),
+                progressBarWidth: response.setHeight(40),
+                handlerSize: response.setHeight(18),
               ),
               customColors: CustomSliderColors(
                 trackColor: Color(0xff18191B),

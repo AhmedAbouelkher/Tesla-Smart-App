@@ -1,5 +1,4 @@
 name: tesla_smart_app
-description: A new Flutter project.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -25,6 +24,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   font_awesome_flutter:
   sleek_circular_slider:
+  response:
+  expandable_bottom_sheet:
+  flutter_map:
+  latlong:
 
 dev_dependencies:
   flutter_test:
@@ -41,17 +44,6 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-  fonts:
-    - family: Raleway
-      fonts:
-      - asset: assets/fonts/Raleway-Light.ttf
-      - weight: 300
-      - asset: assets/fonts/Raleway-Regular.ttf
-      - weight: 400
-      - asset: assets/fonts/Raleway-SemiBold.ttf
-      - weight: 600
-      - asset: assets/fonts/Raleway-Bold.ttf
-      - weight: 700
   assets:
     - assets/images/
   # To add assets to your application, add an assets section, like this:
